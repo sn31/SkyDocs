@@ -1,6 +1,6 @@
 <div class="editor">
   <h1>Editor</h1>
-      <textarea id="editableTitle" [(ngModel)]="docTitle" placeholder="Document Title"></textarea>
+      <textarea (click)="$event.target.select()" id="editableTitle" [(ngModel)]="docTitle" placeholder="Document Title"></textarea>
       <p>{{docTitle}}</p>
       <textarea rows="4" cols="50" id="editableContent" [(ngModel)]="docContent" placeholder="Write something here..."></textarea>
       <p>{{docContent}}</p>
