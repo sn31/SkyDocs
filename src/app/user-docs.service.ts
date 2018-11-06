@@ -4,7 +4,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class UserDocsService {
-  userDocs = FirebaseListObservable<any[]>;
+  userDocs: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
     this.userDocs = database.list('albums');
@@ -30,7 +30,7 @@ export class UserDocsService {
   }
 
   deleteUserDoc(localDocToDelete) {
-    let userDocInFirebase = this.getUserDocById(localUpdatedDoc.$key);
+    let userDocInFirebase = this.getUserDocById(localDocToDelete.$key);
     userDocInFirebase.remove();
   }
 }
