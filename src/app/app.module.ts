@@ -12,6 +12,8 @@ import { EditorComponent} from './editor/editor.component';
 import { routing } from './app.routing';
 import { HttpModule, Http } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
+
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     DashMainComponent,
     DashComponent,
     LandingPageComponent,
-    EditorComponent
+    EditorComponent,
+    EditorToolbarComponent
+
   ],
   imports: [
     BrowserModule,
