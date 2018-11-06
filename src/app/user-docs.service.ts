@@ -19,6 +19,18 @@ export class UserDocsService {
   }
 
   getUserDocById(docNumber: number) {
-    return this.database.object('userDocs/' + docNumber);
+    return this.database.object('/userDocs/' + docNumber);
+  }
+
+  updateUserDoc(localUpdatedDoc) {
+    let userDocInFirebase = this.getUserDocById(localUpdatedDoc.$key);
+    userDocInFirebase.update({
+      key1: localUpdatedDoc.property,
+      key2: localUpdatedDoc.property2});
+  }
+
+  deleteUserDoc(localDocToDelete) {
+    let userDocInFirebase = this.getUserDocById(localUpdatedDoc.$key);
+    userDocInFirebase.remove();
   }
 }
