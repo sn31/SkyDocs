@@ -36,3 +36,13 @@ input, button {
 #pw-label {
     margin-left: 110px;
 }
+
+#id-label {
+    margin-left: 25px;
+
+} 
+
+label {
+    font-size: 12px;
+    margin-top: 2px;
+}
