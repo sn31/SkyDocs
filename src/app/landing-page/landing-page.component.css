@@ -1,0 +1,14 @@
+body {
+    margin-top: 0;
+    background-image: url("../../assets/img/desk-and-typewriter.jpg");
+    height: 1000px;
+}
+
+#splash {
+    background-color:#87bc9a;
+    width: 400px;
+    height: 500px;
+    margin-left: 300px;
+    margin-top: 100px;
+    color: #ffffff;
+}
