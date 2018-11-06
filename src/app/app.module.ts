@@ -4,6 +4,8 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
+import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
+
 import { DashSideComponent } from './dash-side/dash-side.component';
 import { DashTitleComponent } from './dash-title/dash-title.component';
 import { DashMainComponent } from './dash-main/dash-main.component';
@@ -21,6 +23,7 @@ export const firebaseConfig = {
   storageBucket: masterFirebaseConfig.storageBucket
 };
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,9 @@ export const firebaseConfig = {
     DashMainComponent,
     DashComponent,
     LandingPageComponent,
-    EditorComponent
+    EditorComponent,
+    EditorToolbarComponent
+
   ],
   imports: [
     BrowserModule,
