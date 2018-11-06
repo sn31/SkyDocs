@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
+
 import { DashSideComponent } from './dash-side/dash-side.component';
 import { DashTitleComponent } from './dash-title/dash-title.component';
 import { DashMainComponent } from './dash-main/dash-main.component';
@@ -14,6 +16,7 @@ import { HttpModule, Http } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     DashMainComponent,
     DashComponent,
     LandingPageComponent,
-    EditorComponent
+    EditorComponent,
+    EditorToolbarComponent
+
   ],
   imports: [
     BrowserModule,
