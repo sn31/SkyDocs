@@ -4,3 +4,18 @@
     margin-right: 25px;
     margin-bottom: 25px;
 }
+
+.card-footer {
+    font-size: 11px;
+}
+
+p.card-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+div.card-body {
+    padding: 5%;
+}
