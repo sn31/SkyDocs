@@ -21,8 +21,11 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class EditorComponent implements OnInit {
   title = 'Doc Editor';
   menuState: string = 'out';
+  docTitle: String = null;
+  docContent: String = null;
 
-  constructor() { }
+  constructor() {
+   }
 
   toggleMenu(): void {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
@@ -32,3 +35,5 @@ export class EditorComponent implements OnInit {
   }
 
 }
+
+

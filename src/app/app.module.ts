@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
 import { EditorHamburgerComponent } from './editor-hamburger/editor-hamburger.component';
 import { Browser } from 'protractor';
+import { SplashNavbarComponent } from './splash-navbar/splash-navbar.component';
+import { DashDocComponent } from './dashboard/dash-doc/dash-doc.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -36,8 +38,9 @@ export const firebaseConfig = {
     LandingPageComponent,
     EditorComponent,
     EditorToolbarComponent,
-    EditorHamburgerComponent
-
+    EditorHamburgerComponent,
+    SplashNavbarComponent,
+    DashDocComponent
   ],
   imports: [
     BrowserModule,
