@@ -14,6 +14,7 @@ import { routing } from './app.routing';
 import { HttpModule, Http } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
+import { SplashNavbarComponent } from './splash-navbar/splash-navbar.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     DashComponent,
     LandingPageComponent,
     EditorComponent,
-    EditorToolbarComponent
+    EditorToolbarComponent,
+    SplashNavbarComponent
 
   ],
   imports: [

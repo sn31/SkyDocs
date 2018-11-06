@@ -8,10 +8,18 @@
 }
 
 #splash {
-    background-color:#87bc9a;
+    background-color:#232323;
     width: 400px;
     height: 80vh;
     margin-left: 300px;
-  
     color: #ffffff;
+}
+
+#landing-text {
+    padding-left: 5%;
+    padding-top: 10%;
+}
+
+#sign-up-area {
+    margin-top: 200px;
 }
