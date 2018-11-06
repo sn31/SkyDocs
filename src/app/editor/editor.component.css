@@ -7,10 +7,15 @@ h1 {
 }
 #editableTitle {
     height: 5vh;
-    background: rgb(230, 200, 205);
+    background: #87bc9a;
 }
 
 #editableContent {
     height: 80vh;
-    border: 1px solid pink;
+    border: 1px solid #87bc9a;
+}
+
+#hamburger-icon {
+    cursor: pointer;
+    margin: 20px 0 0 20px;
 }

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
@@ -14,6 +15,8 @@ import { routing } from './app.routing';
 import { HttpModule, Http } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
+import { EditorHamburgerComponent } from './editor-hamburger/editor-hamburger.component';
+import { Browser } from 'protractor';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,11 +35,13 @@ export const firebaseConfig = {
     DashComponent,
     LandingPageComponent,
     EditorComponent,
-    EditorToolbarComponent
+    EditorToolbarComponent,
+    EditorHamburgerComponent
 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule,

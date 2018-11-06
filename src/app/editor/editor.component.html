@@ -1,5 +1,9 @@
 <div class="editor">
+  <figure (click)="toggleMenu()" class="bigIcon">
+    <img id="hamburger-icon" src="../../assets/img/hamburger.png">
+  </figure>
   <h1>Editor</h1>
+  <app-editor-hamburger [@slideInOut]="menuState" (clickSender)="toggleMenu()"></app-editor-hamburger>
   <div contenteditable="true" id="editableTitle"></div>
   <div contenteditable="true" id="editableContent"></div>
   <br>
