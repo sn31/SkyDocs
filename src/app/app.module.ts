@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
 
@@ -15,6 +16,12 @@ import { routing } from './app.routing';
 import { HttpModule, Http } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 
 @NgModule({
@@ -31,6 +38,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     FormsModule,
     HttpModule,
     routing
@@ -38,4 +47,5 @@ import { FormsModule } from '@angular/forms';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
