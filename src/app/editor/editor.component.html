@@ -1,8 +1,9 @@
 <div class="editor">
   <h1>Editor</h1>
-  <div contenteditable="true" id="editableTitle"></div>
-  <div contenteditable="true" id="editableContent"></div>
-  <br>
-  <app-editor-toolbar></app-editor-toolbar>
+  <div contenteditable="true" id="editableTitle" [textContent]="docTitle" (input)="docTitle=$event.target.textContent"></div>
+  <p>{{docTitle}}
+    <div contenteditable="true" id="editableContent" [textContent]="docContent" (input)="docContent=$event.target.textContent"></div>
+    <p>{{docContent}}
+      <br>
+      <app-editor-toolbar></app-editor-toolbar>
 </div>
-
