@@ -1,3 +1,7 @@
 .navbar.navbar-expand-lg li a {
-    color: #232323;
+    color: #fcf9f4;
+}
+
+#top-navbar {
+    background-color: #232323; 
 }
