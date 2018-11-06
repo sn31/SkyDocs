@@ -1,5 +1,8 @@
-
-<div *ngFor="let doc of docs">
-
-  <app-dash-doc [displayDoc]="doc"></app-dash-doc>
+<div class="row ">
+  <div *ngFor="let doc of docs; index as i">
+      <div class="cardDisplay">
+        <app-dash-doc [displayDoc]="doc"></app-dash-doc>
+      </div>
+  </div>
 </div>
+
