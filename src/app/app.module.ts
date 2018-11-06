@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { EditorComponent } from './editor/editor.component';
+import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditorComponent
+    EditorComponent,
+    EditorToolbarComponent
   ],
   imports: [
     BrowserModule
