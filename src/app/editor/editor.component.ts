@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editor.component.css']
 })
 export class EditorComponent implements OnInit {
-
-  constructor() { }
+  docTitle: String = null;
+  docContent: String = null;
+  constructor() {
+   }
 
   ngOnInit() {
   }
 
 }
+
+

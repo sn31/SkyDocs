@@ -1,7 +1,8 @@
-<div>
+<div class="editor">
   <h1>Editor</h1>
-  <textarea rows="1" cols="50" placeholder="Document Title"></textarea><br>
-  <textarea rows="4" cols="50" placeholder="Write something here!">
-    </textarea>
-</div><br>
-<app-editor-toolbar></app-editor-toolbar>
+      <textarea (click)="$event.target.select()" id="editableTitle" [(ngModel)]="docTitle" placeholder="Document Title"></textarea>
+      <p>{{docTitle}}</p>
+      <textarea rows="4" cols="50" id="editableContent" [(ngModel)]="docContent" placeholder="Write something here..."></textarea>
+      <p>{{docContent}}</p>
+      <app-editor-toolbar></app-editor-toolbar>
+</div>
