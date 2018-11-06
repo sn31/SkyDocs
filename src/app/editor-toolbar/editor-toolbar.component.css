@@ -1,12 +1,15 @@
 ul {
     list-style-type: none;
     margin-left: 0;
+    padding-left: 0;
+    display: block;
 }
 
 li {
     display: inline-block;
     margin: 0;
     padding: 0;
+    width: 4em;
 }
 
 img {
@@ -16,4 +19,9 @@ img {
 .bigIcon
 {
     width: 50%;
+}
+
+.editor-toolbar {
+    padding-left: auto;
+    padding-right: auto;
 }
