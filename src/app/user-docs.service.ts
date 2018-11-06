@@ -4,7 +4,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class UserDocsService {
-  userDocs = FirebaseListObservable<any[]>;
+  userDocs: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
     this.userDocs = database.list('albums');

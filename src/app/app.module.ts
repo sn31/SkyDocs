@@ -4,17 +4,16 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
-import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
-
-import { DashSideComponent } from './dash-side/dash-side.component';
-import { DashTitleComponent } from './dash-title/dash-title.component';
-import { DashMainComponent } from './dash-main/dash-main.component';
-import { DashComponent } from './dash/dash.component';
+import { DashSideComponent } from './dashboard/dash-side/dash-side.component';
+import { DashTitleComponent } from './dashboard/dash-title/dash-title.component';
+import { DashMainComponent } from './dashboard/dash-main/dash-main.component';
+import { DashComponent } from './dashboard/dash/dash.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditorComponent} from './editor/editor.component';
 import { routing } from './app.routing';
 import { HttpModule, Http } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
