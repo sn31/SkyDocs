@@ -7,7 +7,7 @@ export class UserDocsService {
   userDocs: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.userDocs = database.list('albums');
+    this.userDocs = database.list('userDocs');
   }
 
   getUserDocs(): FirebaseListObservable<any[]> {
@@ -25,8 +25,8 @@ export class UserDocsService {
   updateUserDoc(localUpdatedDoc): void {
     let userDocInFirebase = this.getUserDocById(localUpdatedDoc.$key);
     userDocInFirebase.update({
-      key1: localUpdatedDoc.property,
-      key2: localUpdatedDoc.property2});
+      title: localUpdatedDoc.title,
+      content: localUpdatedDoc.content});
   }
 
   deleteUserDoc(localDocToDelete): void {
