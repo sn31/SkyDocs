@@ -30,7 +30,7 @@ export class UserDocsService {
   }
 
   deleteUserDoc(localDocToDelete) {
-    let userDocInFirebase = this.getUserDocById(localUpdatedDoc.$key);
+    let userDocInFirebase = this.getUserDocById(localDocToDelete.$key);
     userDocInFirebase.remove();
   }
 }
