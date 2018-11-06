@@ -7,7 +7,7 @@ export class UserDocsService {
   userDocs: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.userDocs = database.list('albums');
+    this.userDocs = database.list('userDocs');
   }
 
   getUserDocs(): FirebaseListObservable<any[]> {
