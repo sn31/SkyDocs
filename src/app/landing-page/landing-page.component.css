@@ -23,3 +23,16 @@
 #sign-up-area {
     margin-top: 200px;
 }
+
+#sign-up-button {
+    background-color: #87bc9a;
+}
+
+input, button {
+    float: right;
+    margin-right: 20px;
+}
+
+#pw-label {
+    margin-left: 110px;
+}
