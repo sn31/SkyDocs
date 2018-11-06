@@ -1,0 +1,25 @@
+:host {
+  background: #232323;
+  color: #87bc9a;
+  position: fixed;
+  right: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  min-width: 250px;
+  z-index: 9999;
+}
+
+ul {
+  font-size: 18px;
+  line-height: 3;
+  font-weight: normal;
+  padding-top: 50px;
+  list-style: none;
+}
+
+#delete-sign {
+  cursor: pointer;
+  margin: 20px 0 0 20px;
+}
