@@ -1,0 +1,8 @@
+.editor{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#editibleTitle {
+    border: 1px solid pink;
+}
