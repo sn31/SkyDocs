@@ -12,7 +12,7 @@
           <input #userPassword>
           <div class="spacefiller"></div>
           <p class="link"><a routerLink="/">New? Create an Account</a></p>
-          <button class="btn" id="login-button" (click)="login(userEmail.value,userPassword.value)">Login</button>
+          <button class="btn" id="login-button" (click)="login(userEmail.value,userPassword.value); authStatus()">Login</button>
         </form>    
       </div>
     </div>
