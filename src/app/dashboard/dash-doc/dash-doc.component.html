@@ -6,7 +6,8 @@
     <!-- <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a> -->
     <div class="card-footer text-muted">
-        WC: {{displayDoc.wordCount | number}}   |   Date Created: {{displayDoc.dateCreated | date:'shortDate'}}
+        <!-- WC: {{displayDoc.wordCount | number}}   |   Created: {{displayDoc.dateCreated | date:'shortDate'}} -->
+        {{displayDoc.wordCount | number}}   {{displayDoc.getDateString()}}
       </div>
   </div>
 </div>

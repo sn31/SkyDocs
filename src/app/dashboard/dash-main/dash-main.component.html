@@ -6,3 +6,22 @@
   </div>
 </div>
 
+
+
+<p>
+    ADD UserDoc
+  </p>
+  <div>
+    <div>
+      <label>Doc Title:</label>
+      <br>
+      <input #newTitle>
+    </div>
+
+    <div>
+      <label>Doc Content:</label>
+      <br>
+      <input #newContent>
+    </div>
+    <button (click)="submitForm(newTitle.value, newContent.value); newQuestion.value=''; newTitle.value=''; newContent.value=''">Add</button>
+  </div>
