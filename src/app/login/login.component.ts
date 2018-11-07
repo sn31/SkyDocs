@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import {AuthGuard} from '../authguard.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,15 @@ import {AuthGuard} from '../authguard.service'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService, public router: Router) {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+      } else {
+        this.isLoggedIn = true;
+      }
+    });
+  }
 
   ngOnInit() {
   }
@@ -30,6 +39,10 @@ export class LoginComponent implements OnInit {
     if(this.isLoggedIn == false){
       alert("Login failed. Please try again.");
     }
+    else {
+      this.router.navigate(['dash']);
+    }
   }
+  user;
 
 }

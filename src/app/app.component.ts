@@ -11,18 +11,19 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'app';
 
-  user;
-  private isLoggedIn: Boolean;
+  constructor(){};
+  // user;
+  // private isLoggedIn: Boolean;
 
-  constructor(public authService: AuthService, public router: Router) {
-    this.authService.user.subscribe(user => {
-      if (user == null) {
-        this.isLoggedIn = false;
-        this.router.navigate(['']);
-      } else {
-        this.isLoggedIn = true;
-        this.router.navigate(['dash']);
-      }
-    });
-  }
+  // constructor(public authService: AuthService, public router: Router) {
+  //   this.authService.user.subscribe(user => {
+  //     if (user == null) {
+  //       this.isLoggedIn = false;
+  //       // this.router.navigate(['']);
+  //     } else {
+  //       this.isLoggedIn = true;
+  //       // this.router.navigate(['dash']);
+  //     }
+  //   });
+  // }
 }
