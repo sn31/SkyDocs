@@ -15,8 +15,21 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  private isLoggedIn: Boolean;
+
   login(userEmail: string, userPassword: string) {
     this.authService.login(userEmail,userPassword);
-    console.log("Logged in successfully!");
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+      }
+  });
+}
+
+  authStatus() {
+    if(this.isLoggedIn == false){
+      alert("Login failed. Please try again.");
+    }
   }
+
 }
