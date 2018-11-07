@@ -10,7 +10,7 @@ export class UserDocsService {
     this.userDocs = database.list('userDocs');
   }
 
-  getUserDocs(): FirebaseListObservable<any[]> {
+  getUserDocs() {
     return this.userDocs;
   }
 

@@ -1,0 +1,6 @@
+<figure>
+  <img (click)="xClicked()" id="delete-sign" src="../../assets/img/delete-sign.png">
+</figure>
+<ul *ngFor="let doc of docs | async">
+  <li><a href=#>{{doc.title}}</a></li>
+</ul>
