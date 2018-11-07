@@ -1,16 +1,26 @@
 <div class="editor">
-  <figure class="bigIcon">
-    <img (click)="toggleMenu()" id="hamburger-icon" src="../../assets/img/hamburger.png">
-  </figure>
-  <h1>Editor</h1>
-  <app-editor-hamburger [@slideInOut]="menuState" (clickSender)="toggleMenu()"></app-editor-hamburger>
-  <div contenteditable="true" id="editableTitle"></div>
-  <div contenteditable="true" id="editableContent"></div>
-  <br>
-  <app-editor-toolbar></app-editor-toolbar>
-  <textarea (click)="$event.target.select()" id="editableTitle" [(ngModel)]="docTitle" placeholder="Document Title"></textarea>
-  <p>{{docTitle}}</p>
-  <textarea rows="4" cols="50" id="editableContent" [(ngModel)]="docContent" placeholder="Write something here..."></textarea>
-  <p>{{docContent}}</p>
-  <app-editor-toolbar></app-editor-toolbar>
+<div class="row">
+  <div class="col-md-1">
+    <figure class="bigIcon">
+      <img
+        (click)="toggleMenu()"
+        id="hamburger-icon"
+        src="../../assets/img/hamburger.png"
+      />
+    </figure>
+  </div>
+  <div class="col-md-11 title">Editor</div>
+</div>
+
+<div class="container">
+  <app-editor-hamburger
+    [@slideInOut]="menuState"
+    (clickSender)="toggleMenu()"
+  ></app-editor-hamburger>
+  <div id="editor">
+    <p>Hello World!</p>
+    <p>Some initial <strong>bold</strong> text</p>
+    <p><br /></p>
+  </div>
+</div>
 </div>
