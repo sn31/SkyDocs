@@ -6,7 +6,15 @@
 }
 
 .card-footer {
-    font-size: 11px;
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+    background: #87bc9a;
+    text-align: center;
+}
+
+.card-header {
+    background: #87bc9a;
 }
 
 p.card-text {
@@ -14,8 +22,10 @@ p.card-text {
     padding-right: 20px;
     margin-top: 5%;
     margin-bottom: 5%;
+    height: 185px;    
+    overflow: hidden;    
 }
 
 div.card-body {
-    padding: 5%;
+    padding: 0;
 }
