@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { UserDoc } from './Models/user-doc.model';
 import * as firebase from 'firebase/app';
 
 @Injectable()
@@ -28,7 +29,8 @@ export class AuthService {
     this.afAuth.auth.createUserWithEmailAndPassword(userEmail,userPassword).then( () => {
       this.currentUID = firebase.auth().currentUser.uid;
       console.log(this.currentUID);
-      this.userDatabase.push(this.currentUID);
+      let newDoc = new UserDoc ('Title', 'Content');
+      firebase.database().ref('users/' + this.currentUID + '/userDocs').push(newDoc);
     });
   }
 }
