@@ -1,6 +1,7 @@
 .editor{
     margin-left: auto;
     margin-right: auto;
+    background-image: radial-gradient(circle, white,#fff5ed);
 }
 h1 {
     text-align: center;
@@ -23,11 +24,19 @@ h1 {
     width: 40px;
 }
 
-#editorBox {
-    height: 70vh;
-}
-
 .title {
     text-align: center;
     font-size: 3em;
+    color: #fcf9f4;
 }
+
+#editor {
+    height: 90vh;
+    font-size: 1.5em;
+}
+
+.row {
+    height: 10vh;
+    background-color: #232323;
+}
+
