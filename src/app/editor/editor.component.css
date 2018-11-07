@@ -22,3 +22,12 @@ h1 {
     margin: 20px 0 0 20px;
     width: 40px;
 }
+
+#editorBox {
+    height: 70vh;
+}
+
+.title {
+    text-align: center;
+    font-size: 3em;
+}
