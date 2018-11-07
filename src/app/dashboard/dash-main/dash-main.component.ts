@@ -19,7 +19,6 @@ export class DashMainComponent implements OnInit {
   ngOnInit() {
     this.userDocsService.getUserDocs().subscribe(dataLastEmittedFromObserver => {
       for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
-        console.log(dataLastEmittedFromObserver);
         let newDoc = new UserDoc(dataLastEmittedFromObserver[i].title, 
           dataLastEmittedFromObserver[i].content, 
           dataLastEmittedFromObserver[i].dateCreated);
@@ -30,12 +29,9 @@ export class DashMainComponent implements OnInit {
   }
 
   submitForm(title: string, content: string) {
+    this.docs = [];
     var addUserDoc: UserDoc = new UserDoc(title, content);
     this.userDocsService.addUserDoc(addUserDoc);
   }
 
 }
-
-// ngOnInit() {
-//   this.docs = this.userDocsService.getUserDocs();      
-//   console.log(this.docs)

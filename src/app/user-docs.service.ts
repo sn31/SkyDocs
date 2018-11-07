@@ -19,7 +19,7 @@ export class UserDocsService {
   }
 
   getUserDocById(docNumber: number) {
-    return this.database.object('/userDocs/' + docNumber);
+    return this.database.object('/userDocs/0/John Doe' + docNumber);
   }
 
   updateUserDoc(localUpdatedDoc): void {
