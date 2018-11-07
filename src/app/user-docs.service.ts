@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { UserDoc } from './Models/user-doc.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
+import { AuthService } from './auth.service';
+import * as firebase from 'firebase/app';
 
 @Injectable()
 export class UserDocsService {
+  userID: string = firebase.auth().currentUser.uid;
   userDocs: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.userDocs = database.list('userDocs');
+    this.userDocs = database.list('users/' + this.userID + '/userDocs');
   }
 
   getUserDocs() {

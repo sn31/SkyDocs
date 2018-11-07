@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { UserDocsService } from './../../user-docs.service'
 import { Router } from '@angular/router';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { UserDoc } from '../../Models/user-doc.model';
 
 @Component({
@@ -23,7 +24,6 @@ export class DashMainComponent implements OnInit {
           dataLastEmittedFromObserver[i].content, 
           dataLastEmittedFromObserver[i].dateCreated);
         this.docs.push(newDoc);
-
       }
     });
   }
