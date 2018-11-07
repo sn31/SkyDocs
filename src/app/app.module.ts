@@ -16,7 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
 import { SplashNavbarComponent } from './splash-navbar/splash-navbar.component';
 import { DashDocComponent } from './dashboard/dash-doc/dash-doc.component';
-
+import { LoginComponent } from './login/login.component';
+import { AngularFireAuth } from 'angularfire2/auth';
+import {AngularFireAuthModule} from 'angularfire2/auth';
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -36,7 +38,8 @@ export const firebaseConfig = {
     EditorComponent,
     EditorToolbarComponent,
     SplashNavbarComponent,
-    DashDocComponent
+    DashDocComponent,
+    LoginComponent
 
 
   ],
@@ -44,6 +47,7 @@ export const firebaseConfig = {
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     FormsModule,
     HttpModule,
     routing

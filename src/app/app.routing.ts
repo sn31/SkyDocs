@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashComponent } from './dashboard/dash/dash.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditorComponent} from './editor/editor.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -18,6 +19,10 @@ const appRoutes: Routes = [
     {
         path: 'dash',
         component: DashComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     }
  ];
 
