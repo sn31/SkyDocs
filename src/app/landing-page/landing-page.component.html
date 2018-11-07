@@ -3,18 +3,19 @@
 <div class="landing">
   <div id="splash">
     <div id="landing-text">
-        <h1>Keep journal with SkyDocs</h1>
-        <div id="sign-up-area">
-            <h3>Sign up today</h3>
-            <form id="sign-up">
-              <label id= "id-label" for="user-id">User ID or Email Address</label>
-              <input #userEmail id="user-id"><div class="spacefiller"></div>
-              <label id="pw-label" for="user-password">Password</label>
-              <input #userPassword id="user-password">
-              <div class="spacefiller"></div>
-              <button class="btn" id="sign-up-button" (click)="signup(userEmail.value,userPassword.value)">Sign Up</button>
-          </form>    
-        </div>
+      <h1>Cultivate your thoughts with SkyDocs</h1>
+      <div id="sign-up-area">
+        <h3>Sign up today</h3>
+        <form id="sign-up">
+          <label id= "id-label" for="user-id">User ID or Email Address</label>
+          <input #userEmail id="user-id"><div class="spacefiller"></div>
+          <label id="pw-label" for="user-password">Password</label>
+          <input #userPassword id="user-password">
+          <div class="spacefiller"></div>
+          <p class="link"><a routerLink="/login">Already have an Account? Log in</a></p>
+          <button class="btn" id="sign-up-button" (click)="signup(userEmail.value,userPassword.value)">Sign Up</button>
+        </form>    
+      </div>
     </div>
   </div>
 </div>
