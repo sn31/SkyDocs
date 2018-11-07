@@ -2,12 +2,16 @@ import { UserDocsService } from '../user-docs.service';
 
 export class UserDoc {
   wordCount: number;
-  dateCreated: Date;
-  constructor(public title: string, public content: string) {
+  // dateCreated: string;
+  constructor(public title: string, public content: string, public dateCreated?: number) {
     this.wordCount = this.getWordCount();
-    this.dateCreated = new Date();
+    if (!dateCreated) {
+      this.dateCreated = new Date().getTime();
+    }
+    
   }
 
+  
   getPreviewContent() {
     let returnContent = "";
     let contentWords = this.content.split(" ");

@@ -7,28 +7,32 @@ import { UserDoc } from '../../Models/user-doc.model';
   selector: 'app-dash-main',
   templateUrl: './dash-main.component.html',
   styleUrls: ['./dash-main.component.css'],
-  providers: [UserDocsService] 
+  providers: [UserDocsService]
 })
 export class DashMainComponent implements OnInit {
-  
+
   docs: UserDoc[] = [];
   @Output() loadocsVideoSender = new EventEmitter();
   constructor(private router: Router, private userDocsService: UserDocsService) {
-   }
+  }
 
-   ngOnInit() {
+  ngOnInit() {
     this.userDocsService.getUserDocs().subscribe(dataLastEmittedFromObserver => {
-      for(let i = 0; i < dataLastEmittedFromObserver.length; i++) {
+      for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
         console.log(dataLastEmittedFromObserver);
-        let newDoc = new UserDoc(dataLastEmittedFromObserver[i].title, dataLastEmittedFromObserver[i].content);
+        let newDoc = new UserDoc(dataLastEmittedFromObserver[i].title, 
+          dataLastEmittedFromObserver[i].content, 
+          dataLastEmittedFromObserver[i].dateCreated);
         this.docs.push(newDoc);
 
       }
-    });      
-    console.log(this.docs)
+    });
   }
 
-  
+  submitForm(title: string, content: string) {
+    var addUserDoc: UserDoc = new UserDoc(title, content);
+    this.userDocsService.addUserDoc(addUserDoc);
+  }
 
 }
 
