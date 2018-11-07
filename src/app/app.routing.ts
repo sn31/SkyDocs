@@ -4,13 +4,15 @@ import { DashComponent } from './dashboard/dash/dash.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditorComponent} from './editor/editor.component';
 import { LoginComponent } from './login/login.component';
-
+import {AuthGuard} from './authguard.service';
 
 
 const appRoutes: Routes = [
     {
         path: 'editor',
-        component: EditorComponent
+        component: EditorComponent,
+        canActivate: [AuthGuard]
+
     },
     {
         path: '',
@@ -18,7 +20,8 @@ const appRoutes: Routes = [
     },
     {
         path: 'dash',
-        component: DashComponent
+        component: DashComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'login',

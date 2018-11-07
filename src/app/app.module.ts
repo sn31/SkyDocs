@@ -22,6 +22,9 @@ import { DashDocComponent } from './dashboard/dash-doc/dash-doc.component';
 import { LoginComponent } from './login/login.component';
 import { AngularFireAuth } from 'angularfire2/auth';
 import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AuthGuard} from './authguard.service';
+import {AuthService} from './auth.service';
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -44,7 +47,7 @@ export const firebaseConfig = {
     SplashNavbarComponent,
     DashDocComponent,
     LoginComponent,
-    DashDocComponent
+    DashDocComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,7 @@ export const firebaseConfig = {
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 
