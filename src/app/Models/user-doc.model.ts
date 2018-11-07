@@ -41,7 +41,6 @@ export class UserDoc {
     let years = days / 365;
     // console.log(t, seconds, minutes, hours, days, years)
     // resultString = `${minutes}`;
-    console.log(minutes);
     if (seconds < 59) {
       resultString = `${Math.round(seconds)} seconds ago`;
     } else if (minutes < 59) {
