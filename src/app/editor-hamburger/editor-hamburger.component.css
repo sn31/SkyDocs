@@ -13,13 +13,17 @@
 
 ul {
   font-size: 18px;
-  line-height: 3;
+  line-height: 2;
   font-weight: normal;
-  padding-top: 50px;
   list-style: none;
+}
+
+ul * a {
+  color: #87bc9a;
 }
 
 #delete-sign {
   cursor: pointer;
   margin: 20px 0 0 20px;
+  width: 40px;
 }
