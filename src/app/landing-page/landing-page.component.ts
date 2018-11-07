@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../auth.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -8,19 +10,23 @@ import {AuthService} from '../auth.service';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
-    // this.authService.user.subscribe(user=>{
-
-    // })
-   }
+  private isLoggedIn: Boolean;
+  constructor(public authService: AuthService,public router: Router) {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+      } else {
+        this.isLoggedIn = true;
+      }
+    });
+  }
 
   ngOnInit() {
   }
-  login(userEmail: string, userPassword: string) {
-    this.authService.login(userEmail,userPassword);
-    console.log("djqbwjdhq");
-  }
+ 
   signup(userEmail: string, userPassword: string) {
     this.authService.signup(userEmail,userPassword);
+    this.isLoggedIn = true;
+    this.router.navigate(['dash']);
   }
 }
