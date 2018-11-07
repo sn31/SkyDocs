@@ -19,7 +19,9 @@ import { EditorHamburgerComponent } from './editor-hamburger/editor-hamburger.co
 import { Browser } from 'protractor';
 import { SplashNavbarComponent } from './splash-navbar/splash-navbar.component';
 import { DashDocComponent } from './dashboard/dash-doc/dash-doc.component';
-
+import { LoginComponent } from './login/login.component';
+import { AngularFireAuth } from 'angularfire2/auth';
+import {AngularFireAuthModule} from 'angularfire2/auth';
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -40,6 +42,8 @@ export const firebaseConfig = {
     EditorToolbarComponent,
     EditorHamburgerComponent,
     SplashNavbarComponent,
+    DashDocComponent,
+    LoginComponent,
     DashDocComponent
   ],
   imports: [
@@ -47,6 +51,7 @@ export const firebaseConfig = {
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     FormsModule,
     HttpModule,
     routing
