@@ -1,0 +1,8 @@
+<form id="log-in">
+    <label for="user-id">User ID or Email Address</label>
+    <input #userEmail><div class="spacefiller"></div>
+    <label for="user-password">Password</label>
+    <input #userPassword>
+    <div class="spacefiller"></div>
+    <button class="btn" id="sign-in-button" (click)="login(userEmail.value,userPassword.value)">Enter another world!</button>
+</form>   

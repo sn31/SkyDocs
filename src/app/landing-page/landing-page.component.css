@@ -1,10 +1,10 @@
 .landing {
     margin-top: 0;
     background-image: url("../../assets/img/desk-and-typewriter.jpg");
-    height: 100vh;
+    height: 92vh;
     margin-top: 0;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
 }
 
 #splash {
@@ -45,4 +45,12 @@ input, button {
 label {
     font-size: 12px;
     margin-top: 2px;
+}
+
+.spacefiller {
+    height: 1em;
+}
+
+.btn {
+    border-radius: 0;
 }
