@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   providers: [AuthService,AuthGuard]
 })
 export class LoginComponent implements OnInit {
-
+  private isLoggedIn: Boolean;
   constructor(public authService: AuthService, public router: Router) {
     this.authService.user.subscribe(user => {
       if (user == null) {
@@ -23,8 +23,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  private isLoggedIn: Boolean;
 
   login(userEmail: string, userPassword: string) {
     this.authService.login(userEmail,userPassword);
