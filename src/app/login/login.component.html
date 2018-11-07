@@ -1,8 +1,20 @@
-<form id="log-in">
-    <label for="user-id">User ID or Email Address</label>
-    <input #userEmail><div class="spacefiller"></div>
-    <label for="user-password">Password</label>
-    <input #userPassword>
-    <div class="spacefiller"></div>
-    <button class="btn" id="sign-in-button" (click)="login(userEmail.value,userPassword.value)">Enter another world!</button>
-</form>   
+<app-splash-navbar></app-splash-navbar>
+<div class="landing">
+  <div id="splash">
+    <div id="landing-text">
+      <h1>Welcome Back.</h1>
+      <div id="login-area">
+        <h3>Log In</h3>
+        <form id="log-in">
+          <label for="user-id">User ID or Email Address</label>
+          <input #userEmail><div class="spacefiller"></div>
+          <label for="user-password">Password</label>
+          <input #userPassword>
+          <div class="spacefiller"></div>
+          <p class="link"><a routerLink="/">New? Create an Account</a></p>
+          <button class="btn" id="login-button" (click)="login(userEmail.value,userPassword.value)">Login</button>
+        </form>    
+      </div>
+    </div>
+  </div>
+</div>

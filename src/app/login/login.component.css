@@ -1,0 +1,67 @@
+.landing {
+  margin-top: 0;
+  background-image: url("../../assets/img/desk-and-typewriter.jpg");
+  height: 92vh;
+  margin-top: 0;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+#splash {
+  background-color:#232323;
+  width: 400px;
+  height: 80vh;
+  margin-left: 300px;
+  color: #ffffff;
+}
+
+#landing-text {
+  padding-left: 5%;
+  padding-top: 10%;
+}
+
+#login-area {
+  margin-top: 100px;
+}
+
+#login-button {
+  background-color: #87bc9a;
+}
+
+input, button {
+  float: right;
+  margin-right: 20px;
+}
+
+#pw-label {
+  margin-left: 110px;
+}
+
+#id-label {
+  margin-left: 25px;
+
+} 
+
+label {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.link {
+  font-size: 12px;
+  margin-top: 2px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.link a {
+  color: #87bc9a;
+}
+
+.spacefiller {
+  height: 1em;
+}
+
+.btn {
+  border-radius: 0;
+}

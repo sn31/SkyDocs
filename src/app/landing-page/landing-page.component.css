@@ -21,7 +21,7 @@
 }
 
 #sign-up-area {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 #sign-up-button {
@@ -39,13 +39,24 @@ input, button {
 
 #id-label {
     margin-left: 25px;
-
 } 
 
 label {
     font-size: 12px;
     margin-top: 2px;
 }
+
+.link {
+  font-size: 12px;
+  margin-top: 2px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.link a {
+  color: #87bc9a;
+}
+
 
 .spacefiller {
     height: 1em;
