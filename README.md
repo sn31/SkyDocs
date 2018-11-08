@@ -1,6 +1,20 @@
+#### By _**Brian Nelson, Chris Crow, Mel Yasuda, Skye Nguyen**_
+
 # SkyDocs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+
+## Description
+
+SkyDocs is a rich tech editor where users can create and manage their documents.
+
+## Specifications
+
+* The application allows the user to sign up with their email and password.
+* The application allows the user to log in with the email and password.
+* The application allows the user to create a document on the Dashboard page.
+* The application allows the user to click the document and edit on the Editor page with Quil Rich Text Editor.
+* The application allows the user to save the document.
 
 ## Development server
 
@@ -18,7 +32,7 @@ export const masterFirebaseConfig = {
     databaseURL: "xxx",
     projectId: "xxx",
   };
-  
+
 Replace xxx with firebase apikey data
 
 ## Code scaffolding
@@ -37,6 +51,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Technologies used
+
+* html
+* CSS
+* Angular 5
+* Quil Rich Text Editor (https://quilljs.com/)
+* Firebase
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
