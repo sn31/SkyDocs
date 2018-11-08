@@ -27,6 +27,7 @@ export class LandingPageComponent implements OnInit {
   signup(userEmail: string, userPassword: string) {
     this.authService.signup(userEmail,userPassword);
     this.isLoggedIn = true;
+    this.authService.login(userEmail,userPassword);    
     this.router.navigate(['dash']);
   }
 }

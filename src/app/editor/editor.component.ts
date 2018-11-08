@@ -57,6 +57,5 @@ export class EditorComponent implements OnInit, DoCheck {
       this.workingDoc = this.docsService.getUserDocById(displayedPath);
     }
   }
-}
 
 
