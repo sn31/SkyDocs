@@ -28,7 +28,7 @@ import { Observable } from 'rxjs/Observable';
 export class EditorComponent implements OnInit, DoCheck {
   title = 'Doc Editor';
   menuState: string = 'out';
-  workingDoc: FirebaseObjectObservable<any>;
+  workingDoc: UserDoc;
   docPath: string;
   docTitle: String = null;
   docContent: String = null;
@@ -45,16 +45,23 @@ export class EditorComponent implements OnInit, DoCheck {
     this.route.params.forEach((urlParameters) => {
       this.docId = urlParameters['id'];
     });
-    this.workingDoc = this.docsService.getUserDocById(this.docId);
-    this.docPath = this.route.url._value[1].path;
+    this.docsService.getUserDocById(this.docId).subscribe(dataLastEmittedFromObserver => {
+      this.workingDoc = dataLastEmittedFromObserver;
+      this.docPath = this.workingDoc.$key;
+    });
   }
 
   //because OnInit only happens once, this method checks to see if the url path has changed, and then, if so, it updates the page with the new doc info
   ngDoCheck() {
-    let displayedPath: string = this.route.url._value[1].path;
-    if ( displayedPath !== this.docPath) {
+    let displayedPath: string;
+    this.route.url.subscribe(dataLastEmittedFromObserver => {
+      displayedPath = dataLastEmittedFromObserver[1].path;
+    })
+    if (displayedPath !== this.docPath) {
       this.docPath = displayedPath;
-      this.workingDoc = this.docsService.getUserDocById(displayedPath);
+      this.docsService.getUserDocById(this.docId).subscribe(dataLastEmittedFromObserver => {
+        this.workingDoc = dataLastEmittedFromObserver;
+      });
     }
   }
 
