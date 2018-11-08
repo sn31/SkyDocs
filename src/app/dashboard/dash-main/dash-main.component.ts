@@ -19,6 +19,7 @@ export class DashMainComponent implements OnInit {
   goToEditor(clickedDoc: UserDoc) {
     console.log(clickedDoc.$key);
     this.router.navigate(['editor', clickedDoc.$key]);
+    location.reload();
   }
 
   ngOnInit() {
