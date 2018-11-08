@@ -32,3 +32,9 @@ li:hover {
   margin: 20px 0 0 20px;
   width: 40px;
 }
+
+#dashboard-button {
+  border-radius: 0;
+  background-color: #87bc9a;
+  margin: 0 40px;
+}

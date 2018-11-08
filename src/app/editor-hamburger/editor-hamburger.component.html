@@ -4,3 +4,4 @@
 <ul *ngFor="let doc of docs | async" (click)="goToEditor(doc)">
   <li>{{doc.title}}</li>
 </ul>
+<button routerLink="/dash" class="btn" id="dashboard-button">Dashboard</button>
