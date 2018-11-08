@@ -42,6 +42,7 @@ input {
     font-weight: bold;
     background: #87bc9a;
     text-align: center;
+    padding: 5px;
 }
 
 .card-header {
