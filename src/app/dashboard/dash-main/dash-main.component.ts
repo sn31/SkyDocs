@@ -18,25 +18,28 @@ export class DashMainComponent implements OnInit {
   }
 
   goToEditor(clickedDoc: UserDoc) {
-    console.log(clickedDoc.key);
-    this.router.navigate(['editor', clickedDoc.key]);
+    console.log(clickedDoc.$key);
+    this.router.navigate(['editor', clickedDoc.$key]);
   }
 
   ngOnInit() {
     this.userDocsService.getUserDocs().subscribe(dataLastEmittedFromObserver => {
+      console.log(dataLastEmittedFromObserver);
       for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
         let newDoc = new UserDoc(dataLastEmittedFromObserver[i].title, 
           dataLastEmittedFromObserver[i].content, 
-          dataLastEmittedFromObserver[i].dateCreated,
-          dataLastEmittedFromObserver[i].$key);
+          dataLastEmittedFromObserver[i].dateCreated);
+          newDoc.$key = dataLastEmittedFromObserver[i].$key;
         this.docs.push(newDoc);
       }
     });
   }
 
-  submitForm(title: string, content: string) {
+  submitForm(title: string) {
     this.docs = [];
+    let content: string = "";
     var addUserDoc: UserDoc = new UserDoc(title, content);
+    console.log(addUserDoc, content, title);
     this.userDocsService.addUserDoc(addUserDoc);
   }
 

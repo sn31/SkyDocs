@@ -4,7 +4,7 @@ export class UserDoc {
   wordCount: number;
   $key: any;
   // dateCreated: string;
-  constructor(public title: string, public content: string, public dateCreated?: number, public key?: string) {
+  constructor(public title: string, public content: string, public dateCreated?: number) {
     this.wordCount = this.getWordCount();
     if (!dateCreated) {
       this.dateCreated = new Date().getTime();
@@ -29,7 +29,11 @@ export class UserDoc {
   }
 
   getWordCount() {
-    return this.content.split(" ").length;
+    if (this.content.length > 0){
+      return this.content.split(" ").length;
+    } else {
+      return 0;
+    }
   }
 
   getDateString() {
