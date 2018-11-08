@@ -23,7 +23,6 @@ export class DashMainComponent implements OnInit {
 
   ngOnInit() {
     this.userDocsService.getUserDocs().subscribe(dataLastEmittedFromObserver => {
-      console.log(dataLastEmittedFromObserver);
       for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
         let newDoc = new UserDoc(dataLastEmittedFromObserver[i].title, 
           dataLastEmittedFromObserver[i].content, 
@@ -38,7 +37,6 @@ export class DashMainComponent implements OnInit {
     this.docs = [];
     let content: string = "";
     var addUserDoc: UserDoc = new UserDoc(title, content);
-    console.log(addUserDoc, content, title);
     this.userDocsService.addUserDoc(addUserDoc);
   }
 

@@ -2,6 +2,10 @@ nav * {
     color: #fcf9f4 !important;
 }
 
+#greeting {
+    color: rgb(151, 149, 149) !important;
+}
+
 #top-navbar {
     background-color: #232323 !important;
 }
