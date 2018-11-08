@@ -1,13 +1,12 @@
-
-.card[_ngcontent-c5] {
-    /* margin: 9%; */
-    margin-right: 25px;
-    margin-bottom: 25px;
+.card {
+  cursor: pointer;
+  box-shadow: 0 0 3px #232323;
+  border: none;
+  border-radius: none !important;
 }
 
 .card-footer {
     font-size: 13px;
-    color: black;
     font-weight: bold;
     background: #87bc9a;
     text-align: center;
@@ -15,6 +14,7 @@
 
 .card-header {
     background: #87bc9a;
+    height: 50px;
 }
 
 p.card-text {
@@ -23,9 +23,11 @@ p.card-text {
     margin-top: 5%;
     margin-bottom: 5%;
     height: 185px;    
-    overflow: hidden;    
+    overflow: hidden;   
 }
 
 div.card-body {
     padding: 0;
+    background-color: #fcf9f4;
+
 }
