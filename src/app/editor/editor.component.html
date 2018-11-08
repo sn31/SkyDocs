@@ -9,10 +9,12 @@
         />
       </figure>
     </div>
-  <!-- <div class="col-md-2 title">Editor</div> -->
-    <div class="col-md-11" id="editor-title">
-      <p>{{workingDoc?.title}}</p>
-    </div>
+  <div class="col-md-10 title">Editor</div>
+  <div class="col-md-1 title">
+    <button (click)="saveDoc()">
+      Save
+    </button>
+  </div>
   </div>
 
   <div class="container">
@@ -20,8 +22,6 @@
       [@slideInOut]="menuState"
       (clickSender)="toggleMenu()"
     ></app-editor-hamburger>
-    <!-- <div id="editor">
-      <p>{{workingDoc?.content}}</p>
-    </div> -->
+    
   </div>
 </div>
