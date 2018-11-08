@@ -17,8 +17,8 @@ export class DashMainComponent implements OnInit {
   }
 
   goToEditor(clickedDoc: UserDoc) {
-    console.log(clickedDoc.$key);
     this.router.navigate(['editor', clickedDoc.$key]);
+    location.reload();
   }
 
   ngOnInit() {
@@ -43,7 +43,6 @@ export class DashMainComponent implements OnInit {
 
   deleteDoc(docToDelete: UserDoc) {
     this.docs = [];
-    console.log("deleted " + docToDelete.title + " document");
     this.userDocsService.deleteUserDoc(docToDelete);  
   }
 

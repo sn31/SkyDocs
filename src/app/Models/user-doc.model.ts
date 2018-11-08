@@ -47,8 +47,6 @@ export class UserDoc {
     let weeks = days / 7;
     let months = days / 30;
     let years = days / 365;
-    // console.log(t, seconds, minutes, hours, days, years)
-    // resultString = `${minutes}`;
     if (seconds < 59) {
       resultString = `${Math.round(seconds)} seconds ago`;
     } else if (minutes < 59) {
