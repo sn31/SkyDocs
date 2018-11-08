@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
+import { UserDocsService } from '../user-docs.service';
 
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css'],
+  providers: [UserDocsService],
   animations: [
     trigger('slideInOut', [
       state('in', style({
