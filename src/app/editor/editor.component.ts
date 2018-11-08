@@ -25,7 +25,7 @@ import { Observable } from 'rxjs/Observable';
     ]),
   ]
 })
-export class EditorComponent implements OnInit, DoCheck, AfterContentInit {
+export class EditorComponent implements OnInit, DoCheck{
   title = 'Doc Editor';
   menuState: string = 'out';
   workingDoc: UserDoc;
