@@ -24,6 +24,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AuthGuard} from './authguard.service';
 import {AuthService} from './auth.service';
+import { EditorFixComponent } from './editor-fix/editor-fix.component';
 
 
 export const firebaseConfig = {
@@ -49,6 +50,7 @@ export const firebaseConfig = {
     DashDocComponent,
     LoginComponent,
     DashDocComponent,
+    EditorFixComponent,
   ],
   imports: [
     BrowserModule,

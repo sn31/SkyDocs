@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,Inject,OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,22 +9,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css'],
   providers: [AuthService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'app';
-
-  constructor(){};
-  // user;
-  // private isLoggedIn: Boolean;
-
-  // constructor(public authService: AuthService, public router: Router) {
-  //   this.authService.user.subscribe(user => {
-  //     if (user == null) {
-  //       this.isLoggedIn = false;
-  //       // this.router.navigate(['']);
-  //     } else {
-  //       this.isLoggedIn = true;
-  //       // this.router.navigate(['dash']);
-  //     }
-  //   });
-  // }
+  currentRoute: string;
+  constructor(@Inject(DOCUMENT) private document: Document) { 
+    
+  }
+  ngOnInit() {
+    
+  }
+  getCurrentRoute()
+  {
+    this.currentRoute = this.document.location.href;
+    console.log(this.document.location.href);
+  }
 }
