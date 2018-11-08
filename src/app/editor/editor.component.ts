@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit, DoCheck,AfterContentInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Location } from '@angular/common';
@@ -25,7 +25,7 @@ import { Observable } from 'rxjs/Observable';
     ]),
   ]
 })
-export class EditorComponent implements OnInit, DoCheck {
+export class EditorComponent implements OnInit, DoCheck, AfterContentInit {
   title = 'Doc Editor';
   menuState: string = 'out';
   workingDoc: UserDoc;
@@ -49,6 +49,7 @@ export class EditorComponent implements OnInit, DoCheck {
       this.workingDoc = dataLastEmittedFromObserver;
       this.docPath = this.workingDoc.$key;
     });
+    
   }
 
   //because OnInit only happens once, this method checks to see if the url path has changed, and then, if so, it updates the page with the new doc info
@@ -64,5 +65,6 @@ export class EditorComponent implements OnInit, DoCheck {
       });
     }
   }
+  
 }
 
