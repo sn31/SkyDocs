@@ -18,12 +18,23 @@ ul {
   list-style: none;
 }
 
-ul * a {
+li {
   color: #87bc9a;
+}
+
+li:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #delete-sign {
   cursor: pointer;
   margin: 20px 0 0 20px;
   width: 40px;
+}
+
+#dashboard-button {
+  border-radius: 0;
+  background-color: #87bc9a;
+  margin: 0 40px;
 }

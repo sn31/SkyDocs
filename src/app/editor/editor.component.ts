@@ -1,10 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ActivatedRoute, UrlSegment } from '@angular/router';
+import { Location } from '@angular/common';
+import { UserDocsService } from '../user-docs.service';
+import { UserDoc } from '../Models/user-doc.model';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css'],
+  providers: [UserDocsService],
   animations: [
     trigger('slideInOut', [
       state('in', style({
@@ -18,13 +25,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ]),
   ]
 })
-export class EditorComponent implements OnInit {
+export class EditorComponent implements OnInit, DoCheck {
   title = 'Doc Editor';
   menuState: string = 'out';
+  workingDoc: FirebaseObjectObservable<any>;
+  docPath: string;
   docTitle: String = null;
   docContent: String = null;
+  docId: string = null;
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private location: Location, private docsService: UserDocsService) {
    }
 
   toggleMenu(): void {
@@ -32,8 +42,21 @@ export class EditorComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.docId = urlParameters['id'];
+    });
+    this.workingDoc = this.docsService.getUserDocById(this.docId);
+    this.docPath = this.route.url._value[1].path;
   }
 
+  //because OnInit only happens once, this method checks to see if the url path has changed, and then, if so, it updates the page with the new doc info
+  ngDoCheck() {
+    let displayedPath: string = this.route.url._value[1].path;
+    if ( displayedPath !== this.docPath) {
+      this.docPath = displayedPath;
+      this.workingDoc = this.docsService.getUserDocById(displayedPath);
+    }
+  }
 }
 
 
