@@ -17,14 +17,12 @@ export class DashMainComponent implements OnInit {
   }
 
   goToEditor(clickedDoc: UserDoc) {
-    console.log(clickedDoc.$key);
     this.router.navigate(['editor', clickedDoc.$key]);
     location.reload();
   }
 
   ngOnInit() {
     this.userDocsService.getUserDocs().subscribe(dataLastEmittedFromObserver => {
-      console.log(dataLastEmittedFromObserver);
       for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {
         let newDoc = new UserDoc(dataLastEmittedFromObserver[i].title, 
           dataLastEmittedFromObserver[i].content, 
@@ -39,14 +37,12 @@ export class DashMainComponent implements OnInit {
     this.docs = [];
     let content: string = "";
     var addUserDoc: UserDoc = new UserDoc(title, content);
-    console.log(addUserDoc, content, title);
     this.userDocsService.addUserDoc(addUserDoc);
   }
 
 
   deleteDoc(docToDelete: UserDoc) {
     this.docs = [];
-    console.log("deleted " + docToDelete.title + " document");
     this.userDocsService.deleteUserDoc(docToDelete);  
   }
 
