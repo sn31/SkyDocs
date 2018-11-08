@@ -2,12 +2,20 @@
   <div class="card-body">
     <h5 class="card-title card-header text-center">{{displayDoc.title}}</h5>
     <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-    <p class="card-text">{{displayDoc.getPreviewContent()}}<span class="dotdotdot">........</span></p>
+    <p class="card-text">{{displayDoc.getPreviewContent()}}</p>
     <!-- <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a> -->
     <div class="card-footer text-muted">
         <!-- WC: {{displayDoc.wordCount | number}}   |   Created: {{displayDoc.dateCreated | date:'shortDate'}} -->
-        WC: {{displayDoc.wordCount | number}} |  {{displayDoc.getDateString()}}
+        <div class="row">
+          <div class="left-footer col-4">
+              Words: {{displayDoc.wordCount | number}}
+          </div>
+          <div class="right-footer col-8">
+            {{displayDoc.getDateString()}}
+          </div>
+
+        </div>
       </div>
   </div>
 </div>

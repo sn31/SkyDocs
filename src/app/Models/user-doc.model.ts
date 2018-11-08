@@ -21,6 +21,9 @@ export class UserDoc {
     for (let i = 0; i < previewLength; i++) {
       returnContent += contentWords[i] + " ";
     }
+    if (contentWords.length > PREVIEW - 1) {
+      returnContent += "......";
+    }
     return returnContent;
   }
 
