@@ -11,7 +11,7 @@
     </div>
   <!-- <div class="col-md-2 title">Editor</div> -->
     <div class="col-md-11" id="editor-title">
-      <p>{{(workingDoc | async)?.title}}</p>
+      <p>{{workingDoc?.title}}</p>
     </div>
   </div>
 
@@ -21,7 +21,7 @@
       (clickSender)="toggleMenu()"
     ></app-editor-hamburger>
     <div id="editor">
-      <p>{{(workingDoc | async)?.content}}</p>
+      <p>{{workingDoc?.content}}</p>
     </div>
   </div>
 </div>
