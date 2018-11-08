@@ -25,6 +25,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AuthGuard} from './authguard.service';
 import {AuthService} from './auth.service';
 
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,

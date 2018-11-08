@@ -9,10 +9,9 @@ import {AuthGuard} from './authguard.service';
 
 const appRoutes: Routes = [
     {
-        path: 'editor',
-        component: EditorComponent,
-        canActivate: [AuthGuard]
-
+      path: 'editor/:id',
+      component: EditorComponent,
+      canActivate: [AuthGuard]
     },
     {
         path: '',

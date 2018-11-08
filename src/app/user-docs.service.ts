@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UserDoc } from './Models/user-doc.model';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 import { AuthService } from './auth.service';
 import * as firebase from 'firebase/app';
@@ -22,8 +22,8 @@ export class UserDocsService {
     this.userDocs.push(newDoc);
   }
 
-  getUserDocById(docNumber: number) {
-    return this.database.object('/userDocs/0/John Doe' + docNumber);
+  getUserDocById(docNumber: string): FirebaseObjectObservable<any> {
+    return this.database.object('users/' + this.userID + '/userDocs/' + docNumber);
   }
 
   updateUserDoc(localUpdatedDoc): void {

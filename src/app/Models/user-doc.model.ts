@@ -2,8 +2,9 @@ import { UserDocsService } from '../user-docs.service';
 
 export class UserDoc {
   wordCount: number;
+  $key: any;
   // dateCreated: string;
-  constructor(public title: string, public content: string, public dateCreated?: number) {
+  constructor(public title: string, public content: string, public dateCreated?: number, public key?: string) {
     this.wordCount = this.getWordCount();
     if (!dateCreated) {
       this.dateCreated = new Date().getTime();
