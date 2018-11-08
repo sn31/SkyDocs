@@ -14,11 +14,18 @@ SkyDocs is a rich tech editor where users can create and manage their documents.
 * The application allows the user to log in with the email and password.
 * The application allows the user to create a document on the Dashboard page.
 * The application allows the user to click the document and edit on the Editor page with Quil Rich Text Editor.
-* The application allows the user to save the document.
+* The application allows the user to save the document title.
+* The application allows the user to delete the document.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Known bugs
+
+* The application won't save Quil documents into Firebase.
+* The application won't retreive Quil documents from Firebase.
+* The application won't edit the title of the document.
 
 ## API Key for Firebase:
 
