@@ -1,27 +1,15 @@
+<div>
+  <label>New Document:</label>
+  <input #newTitle>
+  <button (click)="submitForm(newTitle.value); newTitle.value=''" class='btn addDoc'>Add</button>
+</div>
+<br>
 <div class="row ">
   <div *ngFor="let doc of docs; index as i">
-      <div class="cardDisplay">
-        <app-dash-doc [displayDoc]="doc"></app-dash-doc>
-      </div>
+    <div class="cardDisplay">
+      <app-dash-doc [displayDoc]="doc"></app-dash-doc>
+    </div>
   </div>
 </div>
 
 
-
-<p>
-    ADD UserDoc
-  </p>
-  <div>
-    <div>
-      <label>Doc Title:</label>
-      <br>
-      <input #newTitle>
-    </div>
-
-    <div>
-      <label>Doc Content:</label>
-      <br>
-      <input #newContent>
-    </div>
-    <button (click)="submitForm(newTitle.value, newContent.value); newQuestion.value=''; newTitle.value=''; newContent.value=''">Add</button>
-  </div>
