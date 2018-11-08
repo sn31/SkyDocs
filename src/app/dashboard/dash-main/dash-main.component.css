@@ -1,7 +1,8 @@
 .landing {
   margin-top: 0;
+  background-color: #232323;    
   background-image: url("../../../assets/img/desk-and-typewriter.jpg");
-  height: 92.65vh;
+  height: 95.95vh;
   padding-top: 6vh;
   padding-bottom: 6vh;
   
@@ -42,6 +43,7 @@ input {
     font-weight: bold;
     background: #87bc9a;
     text-align: center;
+    padding: 5px;
 }
 
 .card-header {
@@ -62,4 +64,8 @@ div.card-body {
     padding: 0;
     background-color: #fcf9f4;
 
+}
+
+img:hover {
+  border: 1px solid gray;
 }

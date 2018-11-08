@@ -14,30 +14,21 @@ export class EditorToolbarComponent implements OnInit {
   }
   boldText(){
     let selObj = window.getSelection(); 
-    console.log(selObj);
   }
   italicizeText(){
-    console.log("Italicized");
   }
   underlineText(){
-    console.log("Underlined");
   }
   indentL(){
-    console.log("Indented Left");
   }
   indentR(){
-    console.log("Indented Right");
   }
   alignL(){
-    console.log("Aligned Left");
   }
   alignR(){
-    console.log("Aligned Right");
   }
   alignC(){
-    console.log("Aligned Center");
   }
   alignJ(){
-    console.log("Aligned Justify");
   }
 }

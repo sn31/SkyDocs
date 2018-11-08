@@ -10,7 +10,7 @@
     <br>
     <div class="row">
       <div *ngFor="let doc of docs; index as i">
-        <div class="cardDisplay">
+        <div class="cardDisplay" (click)="goToEditor(doc)">
             <div class="card" style="width: 18rem;">
                 <div class="card-header">
                   <div class="row">
@@ -22,7 +22,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-body" (click)="goToEditor(doc)">
+                <div class="card-body">
                   <p class="card-text">{{doc.getPreviewContent()}}</p>
                 </div>
                 <div class="card-footer text-muted">

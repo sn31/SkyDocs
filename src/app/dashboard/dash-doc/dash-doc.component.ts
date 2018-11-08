@@ -24,7 +24,6 @@ export class DashDocComponent implements OnInit {
   }
 
   goToEditor(clickedDoc: UserDoc) {
-    console.log(clickedDoc.$key);
     this.router.navigate(['editor', clickedDoc.$key]);
   }
 
@@ -32,13 +31,10 @@ export class DashDocComponent implements OnInit {
     // this.docs = [];
     let content: string = "";
     var addUserDoc: UserDoc = new UserDoc(title, content);
-    console.log("added document " + title);
     this.userDocsService.addUserDoc(addUserDoc);
   }
 
   deleteDoc(docToDelete: UserDoc) {
-    console.log("deleted " + docToDelete.title + " document");
-    // this.userDocsService.deleteUserDoc(docToDelete);
     this.sendDocsSender.emit(docToDelete);    
   }
 
