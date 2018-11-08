@@ -1,3 +1,65 @@
+.landing {
+  margin-top: 0;
+  background-image: url("../../../assets/img/desk-and-typewriter.jpg");
+  height: 92.65vh;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  
+}
+
+.form-container {
+  background-color: #fcf9f4;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  box-shadow: 0px 0px 5px #232323;
+}
+
+input {
+  border: 1px solid gray;
+}
+
 .addDoc {
-    background-color: #87bc9a
+    background-color: #87bc9a;
+    border-radius: 0;
+    margin: 0 10px;
+    box-shadow: 0 0 2px #232323;
+}
+
+.cardDisplay {
+  margin: 10px;
+}
+
+.card {
+  cursor: pointer;
+  box-shadow: 0 0 3px #232323;
+  border: none;
+  border-radius: none !important;
+}
+
+.card-footer {
+    font-size: 13px;
+    font-weight: bold;
+    background: #87bc9a;
+    text-align: center;
+}
+
+.card-header {
+    background: #87bc9a;
+    height: 50px;
+}
+
+p.card-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 185px;    
+    overflow: hidden;   
+}
+
+div.card-body {
+    padding: 0;
+    background-color: #fcf9f4;
+
 }
