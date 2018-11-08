@@ -1,6 +1,6 @@
 import { Component, OnInit, DoCheck,AfterContentInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { ActivatedRoute, UrlSegment } from '@angular/router';
+import { ActivatedRoute, UrlSegment,Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { UserDocsService } from '../user-docs.service';
 import { UserDoc } from '../Models/user-doc.model';
@@ -34,7 +34,7 @@ export class EditorComponent implements OnInit, DoCheck {
   docContent: String = null;
   docId: string = null;
 
-  constructor(private route: ActivatedRoute, private location: Location, private docsService: UserDocsService) {
+  constructor(private router: Router,private route: ActivatedRoute, private location: Location, private docsService: UserDocsService) {
    }
 
   toggleMenu(): void {
@@ -64,6 +64,10 @@ export class EditorComponent implements OnInit, DoCheck {
         this.workingDoc = dataLastEmittedFromObserver;
       });
     }
+  }
+  saveDoc(){
+    alert("Your document has been saved successfully!");
+    this.router.navigate(['/dash']);
   }
   
 }
