@@ -24,6 +24,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AuthGuard} from './authguard.service';
 import {AuthService} from './auth.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -57,6 +59,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     routing
   ],
   providers: [AuthGuard, AuthService],
