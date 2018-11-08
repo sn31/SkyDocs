@@ -11,8 +11,9 @@
           <label for="user-password">Password</label>
           <input type="password" #userPassword>
           <div class="spacefiller"></div>
+          <p *ngIf="isLoggedIn==false" class='text-danger'>login failed</p>
           <p class="link"><a routerLink="/">New? Create an Account</a></p>
-          <button class="btn" id="login-button" (click)="login(userEmail.value,userPassword.value); authStatus()">Login</button>
+          <button class="btn" id="login-button" (click)="login(userEmail.value,userPassword.value); ">Login</button>
         </form>    
       </div>
     </div>

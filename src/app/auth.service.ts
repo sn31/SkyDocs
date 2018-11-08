@@ -10,8 +10,6 @@ export class AuthService {
   user: Observable<firebase.User>;
   userDatabase: FirebaseListObservable<any[]>;
   currentUID: string;
-
-
   constructor(public afAuth: AngularFireAuth, private database: AngularFireDatabase) {
     this.user = afAuth.authState;
     this.userDatabase = database.list('users');

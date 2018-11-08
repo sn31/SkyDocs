@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck,AfterContentInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Location } from '@angular/common';
