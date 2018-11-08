@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck,AfterContentInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Location } from '@angular/common';
@@ -25,7 +25,7 @@ import { Observable } from 'rxjs/Observable';
     ]),
   ]
 })
-export class EditorComponent implements OnInit, DoCheck, AfterContentInit {
+export class EditorComponent implements OnInit, DoCheck {
   title = 'Doc Editor';
   menuState: string = 'out';
   workingDoc: UserDoc;

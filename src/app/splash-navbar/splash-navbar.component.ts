@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-splash-navbar',
@@ -8,7 +10,7 @@ import { AuthService } from '../auth.service';
 })
 export class SplashNavbarComponent implements OnInit {
   userEmail: string;
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
     this.authService.user.subscribe(user => {
       if (user!= null) {
         this.userEmail = user.email;
@@ -20,6 +22,7 @@ export class SplashNavbarComponent implements OnInit {
 
   logOutClicked() {
     this.authService.logout();
+    this.router.navigate([""]);
   }
 
   ngOnInit() {

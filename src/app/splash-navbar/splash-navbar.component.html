@@ -9,7 +9,7 @@
         <a class="nav-link" id="greeting" routerLink="/dash">Hello {{userEmail}}</a>
       </li>
       <li *ngIf="userEmail != null" (click)="logOutClicked()" class="nav-item">
-        <a class="nav-link" routerLink="">Log Out</a>
+        <a class="nav-link" id="logout">Log Out</a>
       </li>
       <li *ngIf="!userEmail" class="nav-item">
           <a class="nav-link" routerLink="/login">Log In</a>

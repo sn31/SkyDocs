@@ -9,3 +9,7 @@ nav * {
 #top-navbar {
     background-color: #232323 !important;
 }
+
+#logout {
+    cursor: pointer;
+}
