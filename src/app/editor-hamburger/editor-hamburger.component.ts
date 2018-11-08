@@ -16,17 +16,17 @@ export class EditorHamburgerComponent implements OnInit {
 
   constructor(private userDocsService: UserDocsService, private router: Router) { }
 
+  //this method is called by (click) in the html when the X is clicked, and ultimately closes the hamburger menu by emitting to the editor component.
   xClicked(): void {
     this.clickSender.emit();
   }
 
+  //this method navigates to the editor for the specific doc clicked.
   goToEditor(clickedDoc: UserDoc) {
-    console.log('clicked');
     this.router.navigate(['editor', clickedDoc.$key]);
   }
 
   ngOnInit() {
     this.docs = this.userDocsService.getUserDocs();
   }
-
 }
