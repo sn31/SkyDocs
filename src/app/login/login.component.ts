@@ -1,21 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-
+import {AuthGuard} from '../authguard.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [AuthService]
+  providers: [AuthService,AuthGuard]
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private authService: AuthService) { }
+  private isLoggedIn: Boolean;
+  constructor(public authService: AuthService, public router: Router) {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+      } else {
+        this.isLoggedIn = true;
+      }
+    });
+  }
 
   ngOnInit() {
   }
-
-  private isLoggedIn: Boolean;
 
   login(userEmail: string, userPassword: string) {
     this.authService.login(userEmail,userPassword);
@@ -30,6 +37,10 @@ export class LoginComponent implements OnInit {
     if(this.isLoggedIn == false){
       alert("Login failed. Please try again.");
     }
+    else {
+      this.router.navigate(['dash']);
+    }
   }
+  user;
 
 }

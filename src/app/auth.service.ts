@@ -28,7 +28,6 @@ export class AuthService {
   signup(userEmail: string, userPassword: string) {
     this.afAuth.auth.createUserWithEmailAndPassword(userEmail,userPassword).then( () => {
       this.currentUID = firebase.auth().currentUser.uid;
-      console.log(this.currentUID);
       let newDoc = new UserDoc ('Title', 'Content');
       firebase.database().ref('users/' + this.currentUID + '/userDocs').push(newDoc);
     });

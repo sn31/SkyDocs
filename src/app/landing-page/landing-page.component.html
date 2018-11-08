@@ -1,4 +1,3 @@
-
 <app-splash-navbar></app-splash-navbar>
 <div class="landing">
   <div id="splash">
@@ -10,7 +9,7 @@
           <label id= "id-label" for="user-id">User ID or Email Address</label>
           <input #userEmail id="user-id"><div class="spacefiller"></div>
           <label id="pw-label" for="user-password">Password</label>
-          <input #userPassword id="user-password">
+          <input type="password" #userPassword id="user-password">
           <div class="spacefiller"></div>
           <p class="link"><a routerLink="/login">Already have an Account? Log in</a></p>
           <button class="btn" id="sign-up-button" (click)="signup(userEmail.value,userPassword.value)">Sign Up</button>

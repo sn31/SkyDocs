@@ -9,7 +9,7 @@
           <label for="user-id">User ID or Email Address</label>
           <input #userEmail><div class="spacefiller"></div>
           <label for="user-password">Password</label>
-          <input #userPassword>
+          <input type="password" #userPassword>
           <div class="spacefiller"></div>
           <p class="link"><a routerLink="/">New? Create an Account</a></p>
           <button class="btn" id="login-button" (click)="login(userEmail.value,userPassword.value); authStatus()">Login</button>

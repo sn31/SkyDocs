@@ -12,11 +12,20 @@ import { Router } from '@angular/router';
 })
 export class DashSideComponent implements OnInit {
 
-
-  constructor(public authService: AuthService) { }
+  private isLoggedIn: Boolean;
+  constructor(public authService: AuthService,public router: Router) {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+      } else {
+        this.isLoggedIn = true;
+      }
+    });
+  }
 
   logout() {
     this.authService.logout();
+    this.router.navigate(['']);
   }
 
   ngOnInit() {
