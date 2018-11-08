@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UserDocsService } from './../../user-docs.service'
 import { Router } from '@angular/router';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
@@ -13,7 +13,6 @@ import { UserDoc } from '../../Models/user-doc.model';
 export class DashMainComponent implements OnInit {
 
   docs: UserDoc[] = [];
-  @Output() loadocsVideoSender = new EventEmitter();
   constructor(private router: Router, private userDocsService: UserDocsService) {
   }
 
@@ -42,5 +41,13 @@ export class DashMainComponent implements OnInit {
     console.log(addUserDoc, content, title);
     this.userDocsService.addUserDoc(addUserDoc);
   }
+
+
+  deleteDoc(docToDelete: UserDoc) {
+    this.docs = [];
+    console.log("deleted " + docToDelete.title + " document");
+    this.userDocsService.deleteUserDoc(docToDelete);  
+  }
+
 
 }
