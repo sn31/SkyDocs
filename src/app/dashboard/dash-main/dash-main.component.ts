@@ -17,6 +17,10 @@ export class DashMainComponent implements OnInit {
   constructor(private router: Router, private userDocsService: UserDocsService) {
   }
 
+  goToEditor(clickedDoc: UserDoc) {
+    this.router.navigate(['editor', clickedDoc.$key]);
+  }
+
   ngOnInit() {
     this.userDocsService.getUserDocs().subscribe(dataLastEmittedFromObserver => {
       for (let i = 0; i < dataLastEmittedFromObserver.length; i++) {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-editor',
@@ -23,8 +24,9 @@ export class EditorComponent implements OnInit {
   menuState: string = 'out';
   docTitle: String = null;
   docContent: String = null;
+  docId: string = null;
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private location: Location) {
    }
 
   toggleMenu(): void {
@@ -32,6 +34,9 @@ export class EditorComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.docId = urlParameters['id'];
+    });
   }
 
 }

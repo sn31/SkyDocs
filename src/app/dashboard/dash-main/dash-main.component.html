@@ -1,5 +1,5 @@
 <div class="row ">
-  <div *ngFor="let doc of docs; index as i">
+  <div *ngFor="let doc of docs; index as i" (click)="goToEditor(doc)">
       <div class="cardDisplay">
         <app-dash-doc [displayDoc]="doc"></app-dash-doc>
       </div>
