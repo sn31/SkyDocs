@@ -1,6 +1,6 @@
 import { Component,Inject,OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
-import { Router } from '@angular/router';
+import { Router,NavigationEnd } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -12,15 +12,20 @@ import { DOCUMENT } from '@angular/common';
 export class AppComponent implements OnInit{
   title = 'app';
   currentRoute: string;
-  constructor(@Inject(DOCUMENT) private document: Document) { 
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router) { 
     
   }
   ngOnInit() {
-    
-  }
-  getCurrentRoute()
-  {
-    this.currentRoute = this.document.location.href;
+    // this.currentRoute = this.document.location.href;
     console.log(this.document.location.href);
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+          //calls this stuff when navigation ends
+          this.currentRoute = this.document.location.href;
+          console.log("Event generated");
+      }
+  });
+
   }
+  
 }
