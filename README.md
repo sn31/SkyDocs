@@ -1,8 +1,8 @@
-#### By _**Brian Nelson, Chris Crow, Mel Yasuda, Skye Nguyen**_
-
 # SkyDocs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+## Epicodus Group Week - Angular - November, 2018
+
+### By _**Brian Nelson, Chris Crow, Mel Yasuda, Skye Nguyen**_
 
 ## Description
 
@@ -14,7 +14,7 @@ SkyDocs is a rich tech editor where users can create and manage their documents.
 * The application allows the user to log in with the email and password.
 * The application allows the user to create a document on the Dashboard page.
 * The application allows the user to click the document and edit on the Editor page with Quil Rich Text Editor.
-* The application allows the user to save the document title.
+* The application allows the user to save the document and styling as a JSON object to Firebase.
 * The application allows the user to delete the document.
 
 ## Development server
@@ -23,9 +23,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Known bugs
 
-* The application won't save Quil documents into Firebase.
-* The application won't retreive Quil documents from Firebase.
-* The application won't edit the title of the document.
+* The application does not save the changes to the correct document stored on Firebase.
+* The application does not correctly retreive Quil documents from Firebase.
 
 ## API Key for Firebase:
 
@@ -33,12 +32,11 @@ Create a file in src/app/api-keys.ts
 
 Insert Code:
 
-export const masterFirebaseConfig = {
-    apiKey: "xxx",
-    authDomain: "angulargroupweek.firebaseapp.com",
-    databaseURL: "xxx",
-    projectId: "xxx",
-  };
+> export const masterFirebaseConfig = {
+   > apiKey: "xxx",
+   > authDomain: "angulargroupweek.firebaseapp.com",
+   > databaseURL: "xxx",
+   > projectId: "xxx"};
 
 Replace xxx with firebase apikey data
 
@@ -52,15 +50,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Contact & Support
 
-Skye Nguyen - @sn31 - skye@dames.es
-Brian Nelson - @nelsonbrian
-Chris Crow - @ChrisMCrow
-Mel Yasuda - @MelYasuda
+* Skye Nguyen - @sn31 - skye@dames.es
+* Brian Nelson - @nelsonbrian
+* Chris Crow - @ChrisMCrow
+* Mel Yasuda - @MelYasuda
 
 ## Technologies used
 
 * TypeScript
 * Bootstrap
-* Angular 5
+* Angular2
 * Quil Rich Text Editor (https://quilljs.com/)
 * Firebase
