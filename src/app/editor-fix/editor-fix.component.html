@@ -1,6 +1,10 @@
+<br>
+<button class="btn" (click)="saveDoc(title.innerHTML, content.innerHTML)">
+    Save
+  </button>
 <div id="editor">
-  <p>Document's Title</p>
+  <p #title>Document's Title</p>
 </div><br>
 <div id="editor-title">
-  <p>Write something here...</p>
+  <p #content>Write something here...</p>
 </div>
