@@ -6,12 +6,14 @@ import { UserDocsService } from '../user-docs.service';
 import { UserDoc } from '../Models/user-doc.model';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css'],
-  providers: [UserDocsService],
+  providers: [UserDocsService, AuthService],
   animations: [
     trigger('slideInOut', [
       state('in', style({
@@ -33,8 +35,9 @@ export class EditorComponent implements OnInit, DoCheck {
   docTitle: String = null;
   docContent: String = null;
   docId: string = null;
+  userId;
 
-  constructor(private router: Router,private route: ActivatedRoute, private location: Location, private docsService: UserDocsService) {
+  constructor(private authService: AuthService, private router: Router,private route: ActivatedRoute, private location: Location, private docsService: UserDocsService) {
    }
 
   toggleMenu(): void {
@@ -65,9 +68,20 @@ export class EditorComponent implements OnInit, DoCheck {
       });
     }
   }
-  saveDoc(){
-    alert("Your document has been saved successfully!");
-    this.router.navigate(['/dash']);
+ 
+  db = firebase.database();
+  saveDoc(title:string) {
+    this.userId = firebase.auth().currentUser.uid;
+    console.log(this.userId);
+    this.db.ref('/users/'+this.userId+'/userDocs')
+      .push({
+        doc3: {
+          content: "fake3",
+          dateCreated: 154174265232,
+          title: "title3",
+          wordCount: 0
+        }
+      });
   }
   
 }
