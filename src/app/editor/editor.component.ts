@@ -26,7 +26,7 @@ import { Observable } from 'rxjs/Observable';
     ]),
   ]
 })
-export class EditorComponent implements OnInit, DoCheck {
+export class EditorComponent implements OnInit{
   title = 'Doc Editor';
   menuState: string = 'out';
   workingDoc: UserDoc;
@@ -34,41 +34,15 @@ export class EditorComponent implements OnInit, DoCheck {
   docTitle: String = null;
   docContent: String = null;
   docId: string = null;
-  userId;
-
+  
   constructor(private router: Router,private route: ActivatedRoute, private location: Location, private docsService: UserDocsService) {
    }
 
   toggleMenu(): void {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
-
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.docId = urlParameters['id'];
-    });
-    this.docsService.getUserDocById(this.docId).subscribe(dataLastEmittedFromObserver => {
-      this.workingDoc = dataLastEmittedFromObserver;
-      this.docPath = this.workingDoc.$key;
-    });
     
   }
-
-  //because OnInit only happens once, this method checks to see if the url path has changed, and then, if so, it updates the page with the new doc info
-  ngDoCheck() {
-    let displayedPath: string;
-    this.route.url.subscribe(dataLastEmittedFromObserver => {
-      displayedPath = dataLastEmittedFromObserver[1].path;
-    })
-    if (displayedPath !== this.docPath) {
-      this.docPath = displayedPath;
-      this.docsService.getUserDocById(this.docId).subscribe(dataLastEmittedFromObserver => {
-        this.workingDoc = dataLastEmittedFromObserver;
-      });
-    }
-  }
- 
-  
-  
 }
 
