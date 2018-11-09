@@ -1,10 +1,10 @@
 # SkyDocs
 
-![Screenshot](./src/assets/img/creenshot.png)
+![Screenshot](./src/assets/img/screenshot.png)
 
 ## Epicodus Group Week - Angular - November, 2018
 
-### By _**Brian Nelson, Chris Crow, Mel Yasuda, Skye Nguyen**_
+### By **Brian Nelson, Chris Crow, Mel Yasuda, Skye Nguyen**
 
 ## Description
 
