@@ -14,7 +14,6 @@ import { EditorComponent} from './editor/editor.component';
 import { routing } from './app.routing';
 import { HttpModule, Http } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { EditorToolbarComponent } from './editor-toolbar/editor-toolbar.component';
 import { EditorHamburgerComponent } from './editor-hamburger/editor-hamburger.component';
 import { Browser } from 'protractor';
 import { SplashNavbarComponent } from './splash-navbar/splash-navbar.component';
@@ -44,7 +43,6 @@ export const firebaseConfig = {
     DashComponent,
     LandingPageComponent,
     EditorComponent,
-    EditorToolbarComponent,
     EditorHamburgerComponent,
     SplashNavbarComponent,
     DashDocComponent,
