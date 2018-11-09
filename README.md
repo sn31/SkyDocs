@@ -50,23 +50,17 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Contact & Support
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Skye Nguyen - @sn31 - skye@dames.es
+Brian Nelson - @nelsonbrian
+Chris Crow - @ChrisMCrow
+Mel Yasuda - @MelYasuda
 
 ## Technologies used
 
-* html
-* CSS
+* TypeScript
+* Bootstrap
 * Angular 5
 * Quil Rich Text Editor (https://quilljs.com/)
 * Firebase
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
