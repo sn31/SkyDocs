@@ -1,5 +1,7 @@
 # SkyDocs
 
+![Screenshot](./src/assets/img/creenshot.png)
+
 ## Epicodus Group Week - Angular - November, 2018
 
 ### By _**Brian Nelson, Chris Crow, Mel Yasuda, Skye Nguyen**_
@@ -59,6 +61,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 * TypeScript
 * Bootstrap
-* Angular2
-* Quil Rich Text Editor (https://quilljs.com/)
+* Angular CLI version 1.6.5.
+* [Quil Rich Text Editor](https://quilljs.com/)
 * Firebase
