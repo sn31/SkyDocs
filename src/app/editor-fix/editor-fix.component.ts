@@ -21,11 +21,10 @@ export class EditorFixComponent implements OnInit {
       .push({
         doc3: {
           content: content,
-          dateCreated: 154174265232,
+          dateCreated: 154174265232, //put the time tracker functionality here - this is just a placeholder.
           title: title,
-          wordCount: 0
+          wordCount: 0 //also placeholder for now.
         }
       });
-    console.log(title);
   }
 }
