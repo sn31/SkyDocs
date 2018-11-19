@@ -8,7 +8,7 @@
 
 ## Description
 
-SkyDocs is a rich tech editor where users can create and manage their documents.
+SkyDocs is a rich text editor where users can create and manage their documents.
 
 ## Specifications
 
